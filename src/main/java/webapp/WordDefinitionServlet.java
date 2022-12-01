@@ -12,9 +12,10 @@ public class WordDefinitionServlet extends HttpServlet {
 
     private final Gson gson = new Gson();
 
-    public WordDefinitionServlet(){
+    public WordDefinitionServlet() {
 
     }
+
     @Override
     public void doGet(HttpServletRequest request,
                       HttpServletResponse response) throws IOException {
@@ -23,7 +24,7 @@ public class WordDefinitionServlet extends HttpServlet {
         ScrabbleDictionary scrabbleDictionary = new ScrabbleDictionary();
 
         String definition = "no definition available";
-        if(scrabbleDictionary.isWord(word)) {
+        if (scrabbleDictionary.isWord(word)) {
             definition = scrabbleDictionary.getDefinition(word);
         }
 
